@@ -2,45 +2,11 @@
 
 <hr>
 
-- RegisterTemp and LoginTemp are currently not used. It may be added later to register email in database and login user using an OTP to mail to display a dashboard(currently there is no dashboard).
-
-- For now, during checkout, email and mobile number are obtained and after payment is done, the ticket is mailed and SMS'ed to the user.
-
-- A temporary checking portal is also implemented for any user to check the bookings on their behalf.
-
-# Architecture :
-
-    - Backend :- Heroku
-    - Database :- MongoDB
-    - Frontend :- Vercel
-
-# Schema for DB
-
-<hr>
-
-**City Schema**
-
-displayName:
-
-country:
-
-    code:
-
-    displayName:
-
-    currency:
-
-    code:
-
-    currencyName:
-
-    timeZone:
-
-thumbnailSrc:
-
-**Experience Schema**
-
-cityId:
+# Setup :
+    - Clone the repo/Install as zip
+    - Setup .env vars
+    - type in "npm i"  in the terminal for installing dependencies
+    - type in "npm start" and the website should be up and running
 
 displayName:
 
