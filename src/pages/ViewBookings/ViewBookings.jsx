@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 // import HelperMessage from "../../components/universal/HelperMessage/HelperMessage";
-import { Link } from "react-router-dom";
 import "./ViewBookings.css";
 const Login = () => {
   // useState hooks for handling input fields

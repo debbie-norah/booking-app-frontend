@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import HelperMessage from "../../components/universal/HelperMessage/HelperMessage";
 import { Link } from "react-router-dom";
 import "./Login.css";
 const Login = () => {
@@ -43,9 +42,6 @@ const Login = () => {
           onChange={handlePasswordInput}
         />
         <button className="btn login-submit-btn">Login</button>
-        {/* {incorrectLoginCredentials && (
-          <HelperMessage messageContent="Incorrect username or password" />
-        )} */}
         <p className="helper-msg">
           Don't have an account ?{" "}
           <Link to="/register" className="link-text">

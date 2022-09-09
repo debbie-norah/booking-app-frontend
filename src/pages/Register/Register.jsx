@@ -38,6 +38,8 @@ const Register = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     // Since we use preventDefault, the form action won't be executed and hence we perform the post request through axios
+    setUsernameTaken(false);
+    navigate("/");
   };
   return (
     <div className="Register">

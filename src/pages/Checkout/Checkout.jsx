@@ -8,7 +8,7 @@ import axios from "axios";
 const Checkout = () => {
   const experienceId = useParams().experienceId;
   const variantId = useParams().variantId;
-  const [searchParams, setSearchParams] = useSearchParams();
+  const [searchParams] = useSearchParams();
   let ticketDate = searchParams.get("date"); // This is modified to display in the card
   const date = searchParams.get("date"); // This is to push to backend.
   const ticketTime = searchParams.get("time");
@@ -32,7 +32,7 @@ const Checkout = () => {
       .catch((err) => {
         throw err;
       });
-  }, []);
+  }, [experienceId]);
 
   useEffect(() => {
     axios({
@@ -45,7 +45,7 @@ const Checkout = () => {
       .catch((err) => {
         throw err;
       });
-  }, []);
+  }, [variantId]);
 
   const navigate = useNavigate();
 
@@ -153,9 +153,6 @@ const Checkout = () => {
   return (
     <div className="Checkout">
       <div className="summary-card">
-        {/* <div className="message">
-          <p>You can cancel for free until 8:00 AM on 15 September 2022.</p>
-        </div> */}
         <div className="booking-summary">
           <section>
             <div className="header">
@@ -194,7 +191,7 @@ const Checkout = () => {
             </div>
           </section>
           <section>
-            {adults != 0 ? (
+            {adults !== 0 ? (
               <div className="panel">
                 <p>Adults : {adults}</p>
                 <p>
@@ -205,7 +202,7 @@ const Checkout = () => {
             ) : (
               <></>
             )}
-            {children != 0 ? (
+            {children !== 0 ? (
               <div className="panel">
                 <p>Children : {children}</p>
                 <p>
@@ -216,7 +213,7 @@ const Checkout = () => {
             ) : (
               <></>
             )}
-            {infants != 0 ? (
+            {infants !== 0 ? (
               <div className="panel">
                 <p>Infants : {infants}</p>
                 <p>

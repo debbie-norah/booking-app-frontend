@@ -13,8 +13,6 @@ const VariantCard = ({
   setFilteredVariant,
   variants,
   experienceId,
-  availableTimeSlots,
-  price,
   unavailableDates,
   date,
 }) => {
@@ -25,7 +23,7 @@ const VariantCard = ({
     setFilteredVariant(
       variants.filter((variant) => selectedVariant === variant._id)
     );
-  }, [selectedVariant]);
+  }, [selectedVariant, variants, setFilteredVariant]);
 
   // Function to select a variant and assign its id to prop passed from Book
   const makeSelection = () => {
@@ -53,7 +51,7 @@ const VariantCard = ({
       );
     });
     setNotAvailable(unavailableDatesArray.includes(dateChosenString));
-  }, [date]);
+  }, [date, unavailableDates]);
 
   return (
     <div className="VariantCard">

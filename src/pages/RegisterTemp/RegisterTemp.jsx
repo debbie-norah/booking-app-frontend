@@ -1,11 +1,9 @@
 import React, { useState } from "react";
-import { Link, useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 // import HelperMessage from "../../components/universal/HelperMessage/HelperMessage";
 import "./RegisterTemp.css";
 
 const Register = () => {
-  const navigate = useNavigate();
-
   //useState hooks for handling input fields
   // Registration form
   const [firstName, setFirstName] = useState("");

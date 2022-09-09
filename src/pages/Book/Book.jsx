@@ -37,7 +37,7 @@ export const Book = () => {
       .catch((err) => {
         throw err;
       });
-  }, []);
+  }, [experienceId]);
 
   // For the counter for guests
   //States
