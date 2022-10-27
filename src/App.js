@@ -1,4 +1,5 @@
 import "./App.css";
+import React from "react";
 import {
   BrowserRouter as Router,
   Routes,
@@ -12,6 +13,9 @@ import ViewBookings from "./pages/ViewBookings/ViewBookings";
 import Navbar from "./components/universal/Navbar/Navbar";
 import NotFound from "./pages/NotFound/NotFound";
 import Checkout from "./pages/Checkout/Checkout";
+import Login from "./pages/Login/Login";
+import Register from "./pages/Register/Register";
+import Profile from "./pages/UserProfile/UserProfile";
 // import Login from "./pages/Login/Login";
 // import Register from "./pages/Register/Register";
 // import LoginTemp from "./pages/LoginTemp/LoginTemp";
@@ -36,8 +40,9 @@ function App() {
             <Route exact path="/book" element={<NotFound />} />
             {/* For the prototype temporary login using email is used for checking the bookings under the email */}
             <Route exact path="/view-bookings" element={<ViewBookings />} />
-            {/*<Route exact path="/register" element={<Register />} /> */}
-            {/* <Route exact path="/login" element={<LoginTemp />} /> */}
+            {<Route exact path="/register" element={<Register />} /> }
+            {<Route exact path="/login" element={<Login />}/> }
+            {<Route exact path="/userprofile" element={<Profile />}/> }
             {/* <Route exact path="/register" element={<RegisterTemp />} /> */}
             <Route path="*" element={<Navigate to="/" replace />} />
           </Routes>
