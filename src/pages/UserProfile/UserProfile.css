@@ -36,3 +36,24 @@ img{
     border-bottom: 1px solid black;
     margin: 10px;
 }
+
+.stat{
+    width: 100%;
+    text-align: center;
+    display: flex;
+    justify-content: space-around;
+    
+}
+.stat div{
+    width:25%;
+    margin:5px;
+    border: 0.5px solid black;
+    padding: 5px;
+}
+
+.number{
+    font-size: 5vmin;
+}
+.title{
+    font-size: 3vmin;
+}

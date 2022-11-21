@@ -1,0 +1,17 @@
+{
+    "presets": [
+        "@babel/env",
+        "@babel/preset-typescript",
+        "es2015",
+    "env",
+    "react",
+    "stage-0"
+    ],
+    "plugins": [
+        "@babel/proposal-class-properties",
+        "@babel/proposal-object-rest-spread",
+        "transform-es2015-arrow-functions",
+    "check-es2015-constants",
+    "transform-es2015-block-scoping"
+    ]
+}

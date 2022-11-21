@@ -39,12 +39,12 @@ const Register = () => {
   };
 
   //Function to handle form submission
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    // Since we use preventDefault, the form action won't be executed and hence we perform the post request through axios
-    setUsernameTaken(false);
-    navigate("/");
-  };
+  // const handleSubmit = (e) => {
+  //   e.preventDefault();
+  //   // Since we use preventDefault, the form action won't be executed and hence we perform the post request through axios
+  //   setUsernameTaken(false);
+  //   navigate("/");
+  // };
   return (
     <div className="Register">
       <div className="card-left">

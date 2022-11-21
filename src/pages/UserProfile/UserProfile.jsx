@@ -2,7 +2,7 @@ import React from "react";
 import "./UserProfile.css";
 
 const XMLHttpRequest = require("xhr2");
-const xhttp = new XMLHttpRequest();
+//const xhttp = new XMLHttpRequest();
 
 const Profile = () => {
     const query = new URLSearchParams(window.location.search);

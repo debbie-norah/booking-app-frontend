@@ -16,6 +16,8 @@ import Checkout from "./pages/Checkout/Checkout";
 import Login from "./pages/Login/Login";
 import Register from "./pages/Register/Register";
 import Profile from "./pages/UserProfile/UserProfile";
+import Grossbookingline from "./pages/PerformanceDashboard/Performancedashboard";
+import Ratingdashboard from "./pages/Ratingdashboard/Ratingdashboard";
 // import Login from "./pages/Login/Login";
 // import Register from "./pages/Register/Register";
 // import LoginTemp from "./pages/LoginTemp/LoginTemp";
@@ -42,6 +44,8 @@ function App() {
             <Route exact path="/view-bookings" element={<ViewBookings />} />
             {<Route exact path="/register" element={<Register />} /> }
             {<Route exact path="/login" element={<Login />}/> }
+            {<Route exact path="/performancedashboard" element={<Grossbookingline />}/> }
+            {<Route exact path="/ratingdashboard" element={<Ratingdashboard />}/> }
             {<Route exact path="/userprofile" element={<Profile />}/> }
             {/* <Route exact path="/register" element={<RegisterTemp />} /> */}
             <Route path="*" element={<Navigate to="/" replace />} />
@@ -49,7 +53,7 @@ function App() {
         </main>
       </Router>
     </div>
-  );
+  )
 }
 
 export default App;
