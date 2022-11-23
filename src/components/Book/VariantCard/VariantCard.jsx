@@ -1,4 +1,5 @@
 import "./VariantCard.css";
+import React from "react";
 import { HashLink } from "react-router-hash-link";
 import { useEffect, useState } from "react";
 const VariantCard = ({

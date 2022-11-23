@@ -12,6 +12,7 @@ const Register = () => {
   const [lastName, setLastName] = useState("");
   const [registerUsername, setRegisterUsername] = useState("");
   const [registerPassword, setRegisterPassword] = useState("");
+  const [email, setEmail] = useState("");
 
   //useState hook to show helper message if username is already taken in the registration process
   const [usernameTaken, setUsernameTaken] = useState(false);
@@ -33,25 +34,29 @@ const Register = () => {
   const handleRegisterPasswordInput = (e) => {
     setRegisterPassword(e.target.value);
   };
+  const handleEmail = (e) => {
+    setEmail(e.target.value);
+  };
 
   //Function to handle form submission
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    // Since we use preventDefault, the form action won't be executed and hence we perform the post request through axios
-    setUsernameTaken(false);
-    navigate("/");
-  };
+  // const handleSubmit = (e) => {
+  //   e.preventDefault();
+  //   // Since we use preventDefault, the form action won't be executed and hence we perform the post request through axios
+  //   setUsernameTaken(false);
+  //   navigate("/");
+  // };
   return (
     <div className="Register">
       <div className="card-left">
         <h1>Register</h1>
-        <form id="register-form" onSubmit={handleSubmit}>
+        <form id="register-form" action="../../../../auth/register" method="POST">
           <div className="form-group">
             <label>First name:</label>
             <input
               required
               type="text"
               value={firstName}
+              name="fname"
               onChange={handleFirstNameInput}
             />
           </div>
@@ -60,6 +65,7 @@ const Register = () => {
             <input
               type="text"
               value={lastName}
+              name="lname"
               onChange={handleLastNameInput}
             />
           </div>
@@ -87,7 +93,17 @@ const Register = () => {
               onChange={handleRegisterPasswordInput}
             />
           </div>
-          <button className="btn register-submit-btn" onSubmit={handleSubmit}>
+          <div className="form-group">
+            <label>Email:</label>
+            <input
+              required
+              type="email" 
+              name="email"
+              value={email}
+              onChange={handleEmail}
+            />
+          </div>
+          <button className="btn register-submit-btn" type="submit">
             Register
           </button>
           <p className="helper-msg">
