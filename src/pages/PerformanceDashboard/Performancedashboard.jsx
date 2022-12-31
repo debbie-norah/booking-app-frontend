@@ -127,6 +127,7 @@ const Grossbookingline = () => {
   
 
   
+
   
   //  const CustomTooltipPAXprimary = ({ active, payload, label }) => {
   //       if (active) {
@@ -174,6 +175,7 @@ const Grossbookingline = () => {
         <p>Comparison Period</p>
         <p className='date'>21/07/2022</p>
         <p className='date'>21/12/2022</p>
+
       </div>
     </div>
 
@@ -194,6 +196,7 @@ const Grossbookingline = () => {
       </div>
       <div>
         <p className='number'>{arr[0].noTickets}</p>
+
         <p className='title'>Number of Bookings</p>
       </div>
     </div>
@@ -327,6 +330,7 @@ const Grossbookingline = () => {
 <div className="table">
   <table>
     <tr><th>Sl.No</th><th>Experience Name</th><th>City</th><th>Country</th><th>Current Bookings(Primary)</th><th>Bookings Completion Rate(Primary)</th><th>Avg Booking Value(Primary)</th><th>GBV(Primary)</th><th>Count Bookings(Comparison)</th><th>Booking Completion Rate(Comparison)</th><th>Avg Booking Value(Comparison)</th><th>GBV(Comparison)</th><th>Delta GBV (PrimRY VS Comparison)</th></tr>
+
     {tableValues && tableValues.map((item)=>{
       return (
         <>
@@ -341,7 +345,9 @@ const Grossbookingline = () => {
 </div>
 </>
   )
+
       }
+
 }
 
 
